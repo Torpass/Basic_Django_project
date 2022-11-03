@@ -1,0 +1,15 @@
+{%extends 'layouts/base.html'%}
+<h1>Projects</h1>
+
+
+{%block content%}
+
+{%for i in projects%}
+<article class="card">
+    <a href="{% url 'd_project' i.id %}">
+        <h2>⚫{{i.nombre}}</h2>
+    </a>
+</article>
+{%endfor%}
+
+{%endblock%}
